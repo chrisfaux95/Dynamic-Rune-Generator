@@ -1,8 +1,9 @@
 from PIL import Image, ImageDraw
+from string import ascii_letters, digits
 
 WHITE = (255,255,255)
 BLACK = (0,0,0)
-ALPHA = "abcdefghijklmnopqrstuvwxyz" 
+ALPHA = digits + ascii_letters
 
 class RuneGen(object):
 
