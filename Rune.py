@@ -14,7 +14,7 @@ class RuneGen(object):
 		self.y = iny
 		self.w = inw
 		self.points = []
-		self.points.append((lambda t: (t.x,t.y)))
+		self.points.append('x, y')
 		self.lines = []
 		self.name = ""
 
@@ -54,8 +54,9 @@ class RuneGen(object):
 
 
 	# calculates the current values of the point
-	def calculate_point(self,p):
-		return p(self)
+	def calculate_point(self,point_index):
+		point_calc = lambda x, y, w: eval(self.points[point_index])
+		return point_calc(self.x, self.y, self.w)
 
 	# calculates the entire list
 	def calculate_point_list(self):
