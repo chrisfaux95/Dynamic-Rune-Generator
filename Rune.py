@@ -95,7 +95,7 @@ class RuneGen(object):
 		im = Image.new("RGB", self.rune_size(), WHITE)
 		dr = ImageDraw.Draw(im)
 		dr.point(self.calculate_point_list(),BLACK)
-		im.save("images/points_{}.png".format(self.name))
+		im.save(F"images/points_{self.name}.png")
 
 
 	def draw_lines(self):
@@ -103,7 +103,7 @@ class RuneGen(object):
 		dr = ImageDraw.Draw(im)
 		for li in self.calculate_line_list():
 			dr.line(li,BLACK)
-		im.save("images/lines_{}.png".format(self.name))
+		im.save(F"images/lines_{self.name}.png")
 
 
 
