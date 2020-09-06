@@ -9,10 +9,6 @@ ruMirror = RuneGen(x,y,w)
 ruHex = RuneGen(x,y,w)
 ruRhombus = RuneGen(x,y,w)
 
-# pg = PointGen(x,y,w)
-
-# lam = lambda a: a(pg)
-
 point_list_mirror = [
 	lambda t: (t.x,t.y),
 	lambda t: (t.x + t.w, t.y),
