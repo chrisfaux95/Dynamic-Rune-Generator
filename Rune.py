@@ -1,5 +1,6 @@
 from PIL import Image, ImageDraw
 from string import ascii_letters, digits
+from math import floor, sqrt
 
 WHITE = (255,255,255)
 BLACK = (0,0,0)
