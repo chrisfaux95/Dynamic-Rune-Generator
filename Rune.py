@@ -6,9 +6,10 @@ BLACK = (0,0,0)
 
 class RuneGen(object):
 
-	"""docstring for RuneGen"""
+	""" A Class for generating runic designs and spritesheets of them
+	based upon geometric relationships """
 
-	def __init__(self, inx,iny,inw):
+	def __init__(self, inx, iny, inw):
 		self.x = inx
 		self.y = iny
 		self.w = inw
@@ -21,21 +22,21 @@ class RuneGen(object):
 	def set_name(self,s):
 		self.name = s
 
-	# add a point to the list of points
+	# function to add a point to the list of points
 	def add_point(self,p):
 		self.points.append(p)
 
 
-	# append a list of points to the existing point list
+	# function to append a list of points to the existing point list
 	def add_point_list(self,pl):
 		self.points.extend(pl)
 
 
-	# Add a line to the list of lines
+	# Function to add a line relationship to the list of lines
 	def add_line(self,p1,p2):
 		self.lines.append((p1,p2))
 
-
+	# function to add a list of line relationships to the list of lines
 	def add_line_list(self, line_list):
 		self.lines.extend(line_list)
 
@@ -47,7 +48,7 @@ class RuneGen(object):
 		self.lines.append((p1,p2))
 
 
-	def line_gen(self,line_point_list):
+	def line_gen(self, line_point_list):
 		for l in line_point_list:
 			self.line_create(l)
 
