@@ -53,8 +53,8 @@ class RuneGen(object):
 
 
 	# calculates the current values of the point
-	def calculate_point(self,point_index):
-		point_calc = lambda x, y, w: eval(self.points[point_index])
+	def calculate_point(self, point):
+		point_calc = lambda x, y, w: eval(point)
 		return point_calc(self.x, self.y, self.w)
 
 	# calculates the entire list
