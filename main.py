@@ -9,34 +9,30 @@ ruMirror = RuneGen(x,y,w)
 ruHex = RuneGen(x,y,w)
 ruRhombus = RuneGen(x,y,w)
 
-# pg = PointGen(x,y,w)
-
-# lam = lambda a: a(pg)
-
 point_list_mirror = [
-	lambda t: (t.x,t.y),
-	lambda t: (t.x + t.w, t.y),
-	lambda t: (t.x, t.y + t.w),
-	lambda t: (t.x + t.w, t.y + t.w),
-	lambda t: (t.x, t.y + 2 * t.w),
-	lambda t: (t.x + t.w, t.y + 2 * t.w)
+	"x,y",
+	"x + w, y",
+	"x, y + w",
+	"x + w, y + w",
+	"x, y + 2 * w",
+	"x + w, y + 2 * w"
 ]
 
 point_list_hex = [
-	lambda t: (t.x + t.w//2, t.y),
-	lambda t: (t.x + (3*t.w//2), t.y),
-	lambda t: (t.x, t.y + floor(sqrt(3)*t.w/2)),
-	lambda t: (t.x + t.w, t.y + floor(sqrt(3)*t.w/2)),
-	lambda t: (t.x + 2*t.w, t.y + (sqrt(3)*t.w/2)),
-	lambda t: (t.x + t.w//2, t.y + floor(sqrt(3)*t.w)),
-	lambda t: (t.x + (3*t.w//2), t.y + floor(sqrt(3)*t.w))
+	"x + w//2, y",
+	"x + (3*w//2), y",
+	"x, y + floor(sqrt(3)*w/2)",
+	"x + w, y + floor(sqrt(3)*w/2)",
+	"x + 2*w, y + (sqrt(3)*w/2)",
+	"x + w//2, y + floor(sqrt(3)*w)",
+	"x + (3*w//2), y + floor(sqrt(3)*w)"
 ]
 
 point_list_rhombus = [
-	lambda t: (t.x + t.w//2, t.y),
-	lambda t: (t.x, t.y + floor(sqrt(3)*t.w/2)),
-	lambda t: (t.x + t.w, t.y + floor(sqrt(3)*t.w/2)),
-	lambda t: (t.x + t.w//2, t.y + floor(sqrt(3)*t.w))
+	"x + w//2, y",
+	"x, y + floor(sqrt(3)*w/2)",
+	"x + w, y + floor(sqrt(3)*w/2)",
+	"x + w//2, y + floor(sqrt(3)*w)"
 ]
 
 line_list_mirror = [
